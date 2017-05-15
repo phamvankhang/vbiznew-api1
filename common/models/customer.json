@@ -1,0 +1,39 @@
+{
+  "name": "customer",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "fullName": {
+      "type": "string",
+      "required": true
+    },
+    "phoneNumber": {
+      "type": "string",
+      "required": true
+    },
+    "passport": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "age": {
+      "type": "number"
+    },
+    "birthday": {
+      "type": "date"
+    },
+    "email": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [
+
+  ],
+  "methods": {}
+}

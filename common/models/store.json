@@ -1,0 +1,56 @@
+{
+  "name": "store",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "default": "'ten cua hang'"
+    },
+    "address": {
+      "type": "string",
+      "required": true,
+      "default": "dia chi cua hang"
+    },
+    "lon": {
+      "type": "number"
+    },
+    "lat": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "orderStaff": {
+      "type": "hasAndBelongsToMany",
+      "model": "employ",
+      "foreignKey": ""
+    },
+    "managers": {
+      "type": "hasAndBelongsToMany",
+      "model": "employ",
+      "foreignKey": ""
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "find"
+    },
+    {
+      "accessType": "READ",
+      "principalType": "ROLE",
+      "principalId": "orderStaff",
+      "permission": "ALLOW",
+      "property": "findById"
+    }
+  ],
+  "methods": {}
+}

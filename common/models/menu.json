@@ -1,0 +1,58 @@
+{
+  "name": "menu",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "default": "ten mon an"
+    },
+    "detail": {
+      "type": "string"
+    },
+    "price": {
+      "type": "number",
+      "required": true,
+      "default": 50000
+    },
+    "sale": {
+      "type": "number",
+      "default": 0
+    },
+    "images": {
+      "type": [
+        "string"
+      ],
+      "default": [
+        "http://placehold.it/350x150"
+      ]
+    }
+  },
+  "validations": [],
+  "relations": {
+    "store": {
+      "type": "belongsTo",
+      "model": "store",
+      "foreignKey": ""
+    },
+    "categories": {
+      "type": "hasAndBelongsToMany",
+      "model": "category",
+      "foreignKey": ""
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "find"
+    }
+  ],
+  "methods": {}
+}

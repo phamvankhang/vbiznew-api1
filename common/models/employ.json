@@ -1,0 +1,25 @@
+{
+  "name": "employ",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "avatar": {
+      "type": "string",
+      "required": true,
+      "default": "http://placehold.it/150x150"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "stores": {
+      "type": "belongsTo",
+      "model": "store",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

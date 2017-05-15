@@ -1,0 +1,71 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "accountDS"
+  },
+  "AccessToken": {
+    "dataSource": "accountDS",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "accountDS",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "accountDS",
+    "public": false
+  },
+  "Role": {
+    "dataSource": "accountDS",
+    "public": false
+  },
+  "Account": {
+    "dataSource": "accountDS",
+    "public": true
+  },
+  "store": {
+    "dataSource": "accountDS",
+    "public": true
+  },
+  "menu": {
+    "dataSource": "accountDS",
+    "public": true
+  },
+  "category": {
+    "dataSource": "accountDS",
+    "public": true
+  },
+  "floor": {
+    "dataSource": "accountDS",
+    "public": true
+  },
+  "table": {
+    "dataSource": "accountDS",
+    "public": true
+  },
+  "customer": {
+    "dataSource": "accountDS",
+    "public": true
+  },
+  "order": {
+    "dataSource": "accountDS",
+    "public": true
+  },
+  "employ": {
+    "dataSource": "accountDS",
+    "public": true
+  }
+}

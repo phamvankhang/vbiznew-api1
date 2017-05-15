@@ -1,0 +1,15 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "accountDS": {
+    "host": "127.0.0.1",
+    "port": 27017,
+    "database": "loopbackdemo",
+    "username": "vkpham",
+    "password": "khanglopa",
+    "name": "accountDS",
+    "connector": "mongodb"
+  }
+}

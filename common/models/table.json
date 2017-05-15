@@ -1,0 +1,53 @@
+{
+  "name": "table",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "default": "Tên bàn"
+    },
+    "isActive": {
+      "type": "boolean",
+      "required": true,
+      "default": true
+    },
+    "order": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "status": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    }
+  },
+  "validations": [],
+  "relations": {
+    "store": {
+      "type": "belongsTo",
+      "model": "store",
+      "foreignKey": ""
+    },
+    "floor": {
+      "type": "belongsTo",
+      "model": "floor",
+      "foreignKey": ""
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "find"
+    }
+  ],
+  "methods": {}
+}
